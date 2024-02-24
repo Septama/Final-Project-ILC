@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>Bookshelf</title>
+</head>
+<body class="bg-[#121212]">
+    <header class='bg-[#0B60B0] bg-opacity-70 fixed top-0 left-0 right-0'>
+        <nav class='container mx-auto py-4 flex justify-center'>
+            <h1 class='text-3xl md:text-4xl text-white font-semibold'>
+                    Bookshelf
+                </h1>
+            </nav>
+        </header>
+    <main class="container mx-auto py-12 flex flex-col md:flex-row">
+        <section class="w-full md:w-1/2 h-[600px] border rounded-md mt-10 p-8 md:mr-1">
+                <p class="text-4xl text-white font-bold text-center mb-8">Menambahkan Buku ke Bookshelf</p>
+                        <form id="form" class='flex flex-col px-8'>
+                            <div class='mb-6'>
+                            <label class='text-white block mb-2 text-2xl font-medium'>
+                                Judul</label>
+                            <input 
+                            type="text"
+                            id="judul"
+                            name="judul"
+                            class='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                            placeholder="Hello world"
+                            />
+                            </div>
+                            <div class='mb-6'>
+                            <label class='text-white block mb-2 text-2xl font-medium'>
+                                Penulis</label>
+                            <input 
+                            type="text"
+                            id="penulis"
+                            name="penulis"
+                            class='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                            placeholder="Ayala Rahanda"
+                            />
+                            </div>
+                            <div class='mb-6'>
+                            <label class='text-white block mb-2 text-2xl font-medium'>
+                                Tahun</label>
+                            <input 
+                            type="text"
+                            id="tahun"
+                            name="tahun"
+                            class='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5'
+                            placeholder="example: 2024"
+                            />
+                            </div>
+                            <div class='mb-6 text-sm text-white'>
+                            <input name="cekBuku" id="cekBuku" type="checkbox"/>
+                            <label for="cekBuku" class="ml-2"> Sudah selesai dibaca</label>
+                            </div>
+                            <button
+                            type='submit'
+                            class='bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-6 rounded-lg w-full'
+                            >Submit</button>
+                        </form>
+            </section>
+            <section class='w-full md:w-1/2 h-[600px] border rounded-md overflow-hidden mt-10'>
+                <div id="tagBookshelf" class="h-13 flex items-center text-white">
+                </div>
+                <div class="h-[546px] border rounded-md overflow-y-scroll">
+                    <ul id="buku-container" class="w-full">
+                    </ul>
+                </div>
+                </section>
+        </main>
+
+        <script src="./js/index.js"></script>
+</body>
+</html>
